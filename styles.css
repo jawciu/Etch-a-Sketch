@@ -1,5 +1,6 @@
 html {
   font-size: 1em;
+  font-family: 'Rampart One', cursive;
 }
 
 #page {
@@ -7,7 +8,7 @@ html {
   min-height: 100vh;
   max-height: 100vh;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 10fr 0.5fr;
+  grid-template-rows: 1.5fr 10fr 0.5fr;
   grid-template-areas:
   "header header"
   "options grid-area"
@@ -15,8 +16,8 @@ html {
 }
 
 #title {
-  font-size: 2rem;
-  margin-top: 1rem;
+  font-size: 3rem;
+  padding-top: 1rem;
   grid-area: header;
   background-color: pink;
 }
@@ -27,7 +28,7 @@ html {
 }
 
 #grid-container {
-  background-color: brown;
+  background-color: rgb(235, 211, 211);
   grid-area: grid-area;
 }
 
@@ -45,9 +46,62 @@ html {
   grid-template-rows: repeat(16, auto);
   grid-gap: 5px;
   border: solid orange;
-  
+  background-color: white;
 }
 
 .square {
-  background-color: mistyrose;
+  background-color: rgb(255, 255, 255);
+}
+
+.button-container {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+button {
+  font-family: 'Rampart One', cursive;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+}
+
+button:hover {
+  border: solid orange;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 15rem;
+  height: 1rem;
+  border-radius: 5px;   
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  border: solid orange;
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
 }
