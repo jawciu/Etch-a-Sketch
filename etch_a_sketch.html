@@ -13,14 +13,13 @@
   </head>
   <body>
     <div id="page">
-      <header id="header">Etch a Sketch</header>
+      <img src="title.png" id="header" alt="Etch-a-sketch">
       <div id="grid-container">
-          <div id="grid">
-          </div>
+          <div id="grid"></div>
       </div>
       <div id="options">
-         <div class="button-container">
-            <button class="custom">Custom</button>
+        <div class="button-container">
+            <input type="color" id="color-picker">
             <button class="rainbow">Rainbow</button>
             <button class="warm">Warm</button>
             <button class="shading">Shading</button>
@@ -28,10 +27,13 @@
             <button class="clear">Clear</button>
         </div>
         <div class="slidecontainer">
-          <p>Choose a grid</p>
-          <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
-          <p id="dimensions-output"></p>
+            <p>Choose a grid</p>
+            <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
+            <p id="dimensions-output"></p>
         </div>
+      <div> 
+            
+      </div>
       </div>
       <footer id="footer">jawciu</footer>
   </body>

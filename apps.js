@@ -4,11 +4,20 @@ const btnEraser = document.querySelector('.eraser');
 const btnShading = document.querySelector('.shading');
 const btnRainbow = document.querySelector('.rainbow');
 const btnWarm = document.querySelector('.warm');
+const colorPicker = document.querySelector('#color-picker');
 let square;
 let pen = 'black';
 let startDimension = 16;
 let allSquares;
+let customColor;
 
+function getCustomColor(event) {
+  pen = 'custom'
+  customColor = event.target.value;
+};
+
+colorPicker.addEventListener('change',getCustomColor, false);
+colorPicker.addEventListener('input', getCustomColor, false);
 btnShading.addEventListener('click', () => pen = 'shading');
 btnEraser.addEventListener('click', () => pen = 'eraser');
 btnRainbow.addEventListener('click', () => pen = 'rainbow');
@@ -55,13 +64,11 @@ function createGrid(dimension) {
       const hue = huePink[Math.floor(Math.random() * huePink.length)];
       const sat = Math.floor(Math.random() * (100-60)+60);
       const light = Math.floor(Math.random() * (80-50)+50);
-      this.style.backgroundColor = "hsl("+hue +","+ sat+"%," +light+"%)";}
+      this.style.backgroundColor = "hsl("+hue +","+ sat+"%," +light+"%)";
+    } else if (pen == "custom") {
+      this.style.backgroundColor = customColor;
+    }
   };
-
-function warmColours() {
-  
-}
-
 
 function clear() {
   allSquares.forEach(item => item.style.background = 'white')
@@ -86,8 +93,8 @@ slider.addEventListener('mouseup', function() {
   createGrid(slider.value);
 });
 
+
 window.onload = () => {
   createGrid(startDimension);
 };
-
 
