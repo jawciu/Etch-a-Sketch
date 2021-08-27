@@ -5,51 +5,58 @@ html {
 
 #page {
   display: grid;
-  min-height: 100vh;
-  max-height: 100vh;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 0.5fr 1.5fr 10fr 0.5fr;
+  min-height: 110vh;
+  max-height: 110vh;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: 1.7fr 10fr 0.3fr;
   grid-template-areas:
-  "line line"
-  "header header"
+  ". header"
   "options grid-area"
   "footer footer";
-  background-color: rgb(245, 245, 245);
-}
-
-#pink-line {
- background-color: pink;
- grid-area: line;
+  background-color: pink;
 }
 
 #header {
-  display:block;
-  font-size: 3rem;
-  padding-top: 1rem; 
+  font-size: 4.2rem;
+  min-height: 5rem;
+  padding-left: 1.3rem;
   grid-area: header;
-  justify-content: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-self: center;*/
 }
 
 #options {
   grid-area: options;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1.5rem;
 }
 
 #grid-container {
-  /*background-color: rgb(235, 211, 211);*/
   grid-area: grid-area;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  background-color: rgb(241, 241, 241);
 }
 
 #footer {
-  background-color: coral;
+  background-color: rgb(241, 241, 241);
   grid-area: footer;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.8rem;
 }
 
 #grid {
-  max-width: 500px;
-  min-height: 500px;
+  width: 31rem;
+  height: 31rem;
   display: grid;
   /*grid-gap: 2px;*/
-  border: solid orange;
+  border: 1px solid orange;
+  box-shadow:0 0 4px orange;
   background-color: white;
 }
 
@@ -58,22 +65,29 @@ html {
 }
 
 .button-container {
+  padding-top: 2.7rem;
+  padding-bottom: 1.7rem;
   max-width: 15rem;
   display: flex;
   flex-direction: column;
-  /*background-color: blueviolet;*/
-
 }
 
 button {
   font-family: 'Rampart One', cursive;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-top: 1em;
+  padding: 0.8rem 6rem 0.8rem 6rem;
+  margin-top: 1.3em;
+  border-radius: 1em;
+  border: 1px solid blueviolet;
+  box-shadow: 0 0 4px blueviolet;
+  background-color: rgb(245, 245, 245);
 }
 
 button:hover {
-  border: solid orange;
+  /*border: 1px solid orange;
+  box-shadow: 0 0 4px orange;*/
+  border: 1px solid rgb(166, 70, 255);
+  box-shadow: 0 0 5px rgb(182, 104, 255);
+  background-color: rgb(249, 249, 249);
 }
 
 .slidecontainer {
@@ -81,6 +95,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .slider {
@@ -96,7 +111,6 @@ button:hover {
 }
 
 .slider:hover {
-  border: solid orange;
   opacity: 1;
 }
 
