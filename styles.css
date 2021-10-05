@@ -19,10 +19,13 @@ html {
 #header {
   padding-left: 1.3rem;
   grid-area: header;
-  height: 57px;
-  width: 496px;
+  
   display: flex;
   align-self: center;
+}
+#img-title {
+  height: 57px;
+  width: 496px;
 }
 
 #options {
@@ -81,6 +84,7 @@ html {
 }
 
 #color-picker::-webkit-color-swatch {
+  border: none;
   border-radius: 0.8rem;
 }
 
@@ -113,6 +117,9 @@ button:hover {
   align-items: center; 
 }
 
+p {
+  padding: 0.5rem;
+}
 .slider {
   -webkit-appearance: none;
   width: 15rem;
@@ -147,3 +154,43 @@ button:hover {
   cursor: pointer;
 }
 
+/*MEDIA QUERIES*/
+
+@media only screen and (min-device-width: 700px) and (max-device-width: 1024px)
+ and (orientation:portrait) {
+  #page {
+    display: flex;
+    min-height: auto;
+    max-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: rgb(241, 241, 241);
+  }
+  #header {
+    width: 100vw;
+    height: 7rem;
+    background-color: pink;
+    padding:0;
+  }
+  #img-title {
+    margin:auto;
+  }
+  #grid-container {
+    padding: 2rem 0 0 0;
+  }
+  #grid {
+    margin: auto;
+  }
+  .button-container {
+    margin: auto;
+    padding-right: 0;
+  }
+  #options {
+    padding-right: 0;
+  }
+  .slidecontainer{
+    margin:auto;
+  }
+}
