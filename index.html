@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Etach a Sketch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="apps.js" defer></script>
+    <link href="reset.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/12f8aa1234.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <img src="title.png"  alt="Etch-a-sketch" id="img-title">
+      </div>
+      <div id="grid-container">
+          <div id="grid"></div>
+      </div>
+      <div id="options">
+        <div class="button-container">
+            <input type="color" id="color-picker">
+            <button class="rainbow">Rainbow</button>
+            <button class="warm">Warm</button>
+            <button class="shading">Shading</button>
+            <button class="eraser">Eraser</button>
+            <button class="clear">Clear</button>
+        </div>
+        <div class="slidecontainer">
+            <p>Choose a grid</p>
+            <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
+            <p id="dimensions-output"></p>
+        </div>
+      <div> 
+            
+      </div>
+      </div>
+      <footer id="footer"><i class="fab fa-github fa-fw"></i>jawciu</footer>
+  </body>
+</html>
